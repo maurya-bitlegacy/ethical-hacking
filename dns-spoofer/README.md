@@ -1,6 +1,6 @@
 # dns-spoof
 
-Built similar to www.github.com/maurya-bitlegacy/netcut. We will convert packets into scapy packets to allow peeking into various layers and modify its fields.
+Built similar to https://github.com/maurya-bitlegacy/ethical-hacking/tree/main/netcut. We will convert packets into scapy packets to allow peeking into various layers and modify its fields.
 
 The hacker comes in the middle of the target and the DNS server, modifying dns responses as spoof IPs and sending these spoof ip addresses as dns responses back to the target, hence redirecting the target to malicious web pages, fake login pages and even getting him to install fake updates!
 
