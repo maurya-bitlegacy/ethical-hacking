@@ -15,6 +15,6 @@ ps Packets coming to your own machine won't go into the FORWARD chain. Those go 
 
 To handle this NFQUEUE, need to install: pip install netfilterqueue (Use python 3.6. Doesn't install with higher versions apparently)
 
-If we don't forward the packets from the queue to the target, the target won't receive any packets and hence will be unable to browse. Use packet.drop() to forward packets to the target. Use packet.drop() to drop em.
+If we don't forward the packets from the queue to the target, the target won't receive any packets and hence will be unable to browse. Use packet.accept() to forward packets to the target. Use packet.drop() to drop em.
 
 In the end, don't forget to delete the IP table you created. (These things are already done using subprocess module, but still need to do it if program is terminated with something other than a keyboard interrupt).
