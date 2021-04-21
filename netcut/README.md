@@ -9,7 +9,7 @@ A better implementation is to place many packets in a queue, modify them, and se
 The FORWARD chain of iptables is the place where incoming packets to be forwarded are kept by default. We're going to keep the packets in NFQUEUE (Net Filter Queue). Can specify any queue number. Can also use the subprocess module to do this.
 Command: iptables -I FORWARD -j NFQUEUE --queue-num 0
 
-As the FORWARD chain stores the packets corresponding to IP forwarding, you need to become the man-in-the-middle first using ARP spoofing (arp-spoof.py). For more info on this, see www.github.com/maurya-bitlegacy/arp-spoof.
+As the FORWARD chain stores the packets corresponding to IP forwarding, you need to become the man-in-the-middle first using ARP spoofing (arp-spoof.py). For more info on this, see https://github.com/maurya-bitlegacy/ethical-hacking/tree/main/arp-spoofer.
 
 ps Packets coming to your own machine won't go into the FORWARD chain. Those go into the INPUT chain (Responses). Those going out of your machine go into the OUTPUT chain (Requests). So if you redirect the packets of the INPUT or OUTPUT chains to the queue by modifying the command before, you'd be cutting your own internet access :p
 
