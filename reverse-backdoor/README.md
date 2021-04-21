@@ -13,5 +13,5 @@ It is beneficial to split the command into the list, so that the first string ca
 
 Using base64 encoding is necessary for downloading (writing) files other than simple text files (like images). Or elese UnicodeDecodeError will be thrown.
 
-To avoid losing connection on doing illegal shit, like typing wrong commands, uploading non-existing files etc
+To avoid losing connection on doing illegal shit, like typing wrong commands, uploading non-existing files etc catch any exceptions that may occur.
 
